@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhận Key LUCKY CHEAT</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .game-box {
+            background: #222;
+            padding: 20px;
+            margin: 20px auto;
+            width: 350px;
+            border-radius: 10px;
+            border: 5px solid;
+            position: relative;
+            animation: glow 4.5s infinite alternate;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        @keyframes glow {
+    10% { border-color: #0000FF; } /* xanh dương*/
+    20% { border-color: #FF0000; } /* đỏ */
+    30% { border-color: #FF00FF; } /* Tím */
+    40% { border-color: #FFD700; } /* Quay lại vàng */
+    50% { border-color: #00FF00; } /* Xanh lá */
+    50% { border-color: #00FFFF; } /* lam */
+    50% { border-color: #4B0082; } /* tràm */   
+}
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .game-box img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .game-info {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nhận Key Game</h1>
+    <div class="game-box">
+        <img src="https://cdn.tgdd.vn/2021/01/GameApp/icon-200x200-1.png" alt="PUBG Mobile">
+        <div class="game-info">
+            <h2>PUBG Mobile</h2>
+            <p>Lưu ý: Số lần vượt hiện tại là 1000</p>
+            <button onclick="getKey('pubg')">Nhận KEY</button>
+        </div>
+    </div>
+    <div class="game-box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Vfiuv6gyx_Ww4VuMJb66ne2cKzZ6PuW8Tw&s" alt="Liên Quân Mobile">
+        <div class="game-info">
+            <h2>Liên Quân Mobile</h2>
+            <p>Lưu ý: Số lần vượt hiện tại là 1000</p>
+            <button onclick="getKey('lienquan')">Nhận KEY</button>
+        </div>
+    </div>
+    <div class="game-box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa7b5jWf9gjNNtUKn02VJZZ9u8OHz00thdmA&s" alt="Play TGT">
+        <div class="game-info">
+            <h2>Play TGT</h2>
+            <p>Lưu ý: Số lần vượt hiện tại là 1000</p>
+            <button onclick="getKey('playtgt')">Nhận KEY</button>
+        </div>
+    </div>
+    
+    <script>
+        const keyLinks = {
+            pubg: "https://example.com/pubg-key",
+            lienquan: "https://example.com/lienquan-key",
+            playtgt: "https://example.com/playtgt-key"
+        };
+
+        function getKey(game) {
+            window.location.href = keyLinks[game];
+        }
+    </script>
+</body>
+</html>
