@@ -13,70 +13,83 @@
         }
         .game-box {
             background: #222;
-            padding: 20px;
-            margin: 20px auto;
-            width: 350px;
+            padding: 15px;
+            margin: 15px auto;
+            width: 250px;
             border-radius: 10px;
-            border: 5px solid;
+            border: 3px solid;
             position: relative;
             animation: glow 4.5s infinite alternate;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 15px;
+            justify-content: center;
         }
         @keyframes glow {
-    10% { border-color: #0000FF; } /* xanh dương*/
-    20% { border-color: #FF0000; } /* đỏ */
-    30% { border-color: #FF00FF; } /* Tím */
-    40% { border-color: #FFD700; } /* Quay lại vàng */
-    50% { border-color: #00FF00; } /* Xanh lá */
-    50% { border-color: #00FFFF; } /* lam */
-    50% { border-color: #4B0082; } /* tràm */   
-}
+            10% { border-color: #0000FF; }
+            20% { border-color: #FF0000; }
+            30% { border-color: #FF00FF; }
+            40% { border-color: #FFD700; }
+            50% { border-color: #00FF00; }
+            60% { border-color: #00FFFF; }
+            70% { border-color: #4B0082; }
+        }
+        .game-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .game-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .game-info {
+            text-align: center;
+        }
         button {
             background: #007bff;
             color: white;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 8px 16px;
+            font-size: 14px;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: 10px;
         }
         button:hover {
             background: #0056b3;
         }
-        .game-box img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-        }
-        .game-info {
-            text-align: left;
-        }
     </style>
 </head>
 <body>
-    <h1>Nhận Key Game</h1>
+    <h1>KEY GAME LUCKY CHEAT</h1>
     <div class="game-box">
-        <img src="https://cdn.tgdd.vn/2021/01/GameApp/icon-200x200-1.png" alt="PUBG Mobile">
-        <div class="game-info">
+        <div class="game-header">
+            <img src="https://cdn.tgdd.vn/2021/01/GameApp/icon-200x200-1.png" alt="PUBG Mobile">
             <h2>PUBG Mobile</h2>
+        </div>
+        <div class="game-info">
             <p>Lưu ý: Số lần vượt hiện tại là 1000</p>
             <button onclick="getKey('pubg')">Nhận KEY</button>
         </div>
     </div>
     <div class="game-box">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Vfiuv6gyx_Ww4VuMJb66ne2cKzZ6PuW8Tw&s" alt="Liên Quân Mobile">
-        <div class="game-info">
+        <div class="game-header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Vfiuv6gyx_Ww4VuMJb66ne2cKzZ6PuW8Tw&s" alt="Liên Quân Mobile">
             <h2>Liên Quân Mobile</h2>
+        </div>
+        <div class="game-info">
             <p>Lưu ý: Số lần vượt hiện tại là 1000</p>
             <button onclick="getKey('lienquan')">Nhận KEY</button>
         </div>
     </div>
     <div class="game-box">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa7b5jWf9gjNNtUKn02VJZZ9u8OHz00thdmA&s" alt="Play TGT">
-        <div class="game-info">
+        <div class="game-header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa7b5jWf9gjNNtUKn02VJZZ9u8OHz00thdmA&s" alt="Play TGT">
             <h2>Play TGT</h2>
+        </div>
+        <div class="game-info">
             <p>Lưu ý: Số lần vượt hiện tại là 1000</p>
             <button onclick="getKey('playtgt')">Nhận KEY</button>
         </div>
