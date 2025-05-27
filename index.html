@@ -1,201 +1,120 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mua Key Hack Game</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #121212;
-      color: #f1f1f1;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    .container {
-      max-width: 550px;
-      margin: auto;
-      margin-top: 30px;
-      padding: 20px;
-      background-color: #1e1e1e;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    }
-    .form-label {
-      font-weight: bold;
-    }
-    .form-select, .form-control {
-      background-color: #2c2c2c;
-      color: white;
-      border: 1px solid #555;
-    }
-    .form-select option {
-      color: black;
-    }
-    .btn-primary {
-      background: linear-gradient(90deg, #8e2de2, #4a00e0);
-      border: none;
-    }
-    #previewImg {
-      max-width: 100%;
-      max-height: 200px;
-      margin-top: 10px;
-      display: none;
-      border: 1px solid #333;
-    }
-    .copy-btn {
-      margin-left: 10px;
-      font-size: 14px;
-    }
-    #previewWrapper {
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>key game free</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .game-box {
+            background: #222;
+            padding: 15px;
+            margin: 15px auto;
+            width: 250px;
+            border-radius: 10px;
+            border: 3px solid;
+            position: relative;
+            animation: glow 4.5s infinite alternate;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        @keyframes glow {
+            10% { border-color: #0000FF; }
+            20% { border-color: #FF0000; }
+            30% { border-color: #FF00FF; }
+            40% { border-color: #FFD700; }
+            50% { border-color: #00FF00; }
+            60% { border-color: #00FFFF; }
+            70% { border-color: #4B0082; }
+        }
+        .game-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .game-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .game-info {
+            text-align: center;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h3 class="text-center mb-4">📌 Mua Key Hack Game</h3>
-    <form id="orderForm">
-      <div class="mb-3">
-        <label class="form-label">Game bạn muốn mua</label>
-        <select class="form-select" id="game" required>
-          <option value="">-----</option>
-          <option value="Play Together VNG">🎮 PLAY TOGETHER VNG</option>
-          <option value="Liên Quân Mobile">🔥 Liên Quân Mobile</option>
-          <option value="PUBG Mobile">🔫 PUBG Mobile</option>
-        </select>
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Chọn thời hạn</label>
-        <select class="form-select" id="duration" required>
-          <option value="">-----</option>
-          <option value="1day">1 ngày - 10.000đ</option>
-          <option value="7day">7 ngày - 35.000đ</option>
-          <option value="30day">30 ngày - 150.000đ</option>
-        </select>
-      </div>
+    <h1>KEY GAME NGỘ KHÔNG</h1>
 
-      <div class="mb-4 text-center">
-        <button type="button" class="btn btn-warning" onclick="showPaymentInfo()">Tiếp tục thanh toán</button>
-      </div>
-
-      <div id="paymentBox" style="display:none;">
-        <hr />
-        <h5>💳 Thông tin thanh toán</h5>
-        <p><strong>👤 Chủ TK:</strong> HOANG QUOC VIET</p>
-        <p><strong>🏦 Ngân hàng:</strong> MB Bank</p>
-        <p><strong>💳 STK:</strong> 
-          <span id="stk">07000021112004</span>
-          <button class="btn btn-sm btn-success copy-btn" onclick="copyText('07000021112004'); return false;">📋 Copy</button>
-        </p>
-        <p><strong>💰 Số tiền:</strong> <span id="amount">--</span></p>
-        <p><strong>📝 Nội dung:</strong> 
-          <span id="note">NAP1002</span>
-          <button class="btn btn-sm btn-success copy-btn" onclick="copyText(document.getElementById('note').innerText); return false;">📋 Copy</button>
-        </p>
-        <p><strong>🛒 Sản phẩm:</strong> <span id="product">--</span></p>
-
-	<div style="text-align: center;">
-  <img src="https://qr.sepay.vn/img?acc=07000021112004&bank=MBBank&amount=&des=&template=compact"
-       alt="QR Code"
-       style="max-width: 300px; width: 100%;" />
-</div>
-
-
-        <div class="mb-3">
-          <label class="form-label">Tải ảnh xác nhận thanh toán</label>
-          <input type="file" class="form-control" id="invoiceUpload" accept="image/*" required>
+    <!-- PUBG -->
+    <div class="game-box">
+        <div class="game-header">
+            <img src="https://cdn.tgdd.vn/2021/01/GameApp/icon-200x200-1.png" alt="PUBG Mobile">
+            <h2>PUBG Mobile</h2>
         </div>
-
-        <div id="previewWrapper">
-          <img id="previewImg" class="mx-auto d-block" />
+        <div class="game-info">
+            <p>Lưu ý: Số lần vượt hiện tại là 2</p>
+            <button onclick="getKey('pubg')">Nhận KEY</button>
         </div>
+    </div>
 
-        <div class="mt-3 text-center">
-          <button type="button" class="btn btn-primary" onclick="confirmPayment()">✅ Xác nhận giao dịch thành công</button>
+    <!-- Liên Quân -->
+    <div class="game-box">
+        <div class="game-header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Vfiuv6gyx_Ww4VuMJb66ne2cKzZ6PuW8Tw&s" alt="Liên Quân Mobile">
+            <h2>Liên Quân Mobile</h2>
         </div>
+        <div class="game-info">
+            <p>Lưu ý: Số lần vượt hiện tại là 2</p>
+            <button onclick="getKey('lienquan')">Nhận KEY</button>
+        </div>
+    </div>
 
-        <div id="resultBox" class="mt-3 text-center"></div>
-      </div>
-    </form>
-  </div>
+    <!-- Play TGT -->
+    <div class="game-box">
+        <div class="game-header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL6LAHpEIzfz4NgVk8exp2Orw1iWGNWRBSGw&s" alt="Play Together">
+            <h2>Play TGT</h2>
+        </div>
+        <div class="game-info">
+            <p>Lưu ý: Số lần vượt hiện tại là 2</p>
+            <button onclick="getKey('tgt')">Nhận KEY</button>
+        </div>
+    </div>
 
-  <script>
-    function copyText(text) {
-      navigator.clipboard.writeText(text)
-        .then(() => alert("📋 Đã sao chép: " + text));
-    }
+    <script>
+        const keyLinks = {
+          pubg: "https://script.google.com/macros/s/AKfycbwTD-R5iBfgOolXGQ6FZriM5_gcdvOVch_D04HsBxrc7_loah5CD-0BhU1UZpj1ZV2CVw/exec",
+            lienquan: "https://script.google.com/macros/s/AKfycbwTD-R5iBfgOolXGQ6FZriM5_gcdvOVch_D04HsBxrc7_loah5CD-0BhU1UZpj1ZV2CVw/exec",
+            tgt: "https://script.google.com/macros/s/AKfycbwTD-R5iBfgOolXGQ6FZriM5_gcdvOVch_D04HsBxrc7_loah5CD-0BhU1UZpj1ZV2CVw/exec"
+          pubg: "https://script.google.com/macros/s/AKfycbyebWqJ0apch1vfjttpfS1Gn8NirJRQo1nx_BBPvuoZqAFRS82B97FhZZTK47ezLskI_w/exec",
+            lienquan: "https://script.google.com/macros/s/AKfycbyebWqJ0apch1vfjttpfS1Gn8NirJRQo1nx_BBPvuoZqAFRS82B97FhZZTK47ezLskI_w/exec",
+            tgt: "https://script.google.com/macros/s/AKfycbyebWqJ0apch1vfjttpfS1Gn8NirJRQo1nx_BBPvuoZqAFRS82B97FhZZTK47ezLskI_w/exec"
+// Cập nhật link thật ở đây nếu bạn có  
+        };
 
-    function showPaymentInfo() {
-      const game = document.getElementById("game").value;
-      const duration = document.getElementById("duration").value;
-      if (!game || !duration) {
-        alert("Vui lòng chọn game và thời hạn!");
-        return;
-      }
-
-      const product = `${duration === '1day' ? '1 ngày' : duration === '7day' ? '7 ngày' : '30 ngày'} | ${game}`;
-      const priceMap = { '1day': '10.000 VNĐ', '7day': '35.000 VNĐ', '30day': '150.000 VNĐ' };
-
-      document.getElementById("product").innerText = product;
-      document.getElementById("amount").innerText = priceMap[duration];
-      document.getElementById("paymentBox").style.display = "block";
-    }
-
-    document.getElementById("invoiceUpload").addEventListener("change", function(event) {
-      const file = event.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        const img = document.getElementById("previewImg");
-        img.src = e.target.result;
-        img.style.display = "block";
-      };
-      reader.readAsDataURL(file);
-    });
-
-    function confirmPayment() {
-      const duration = document.getElementById("duration").value;
-      const imageInput = document.getElementById("invoiceUpload");
-      const file = imageInput.files[0];
-
-      if (!duration || !file) {
-        alert("Vui lòng chọn thời hạn và tải ảnh hóa đơn!");
-        return;
-      }
-
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        const imageBase64 = e.target.result;
-        const formData = new FormData();
-        formData.append("duration", duration);
-        formData.append("image", imageBase64);
-
-        const resultBox = document.getElementById("resultBox");
-        resultBox.innerHTML = `⏳ Đang xử lý giao dịch...`;
-
-        fetch("https://script.google.com/macros/s/AKfycbw1UpjWg44BvHst_0utOoKPpqfPs6fGzjYx1SNQ9_jCi86BvCsRX-SxocqSI_SKKDoU/exec", {
-          method: "POST",
-          body: formData
-        })
-        .then(res => res.json())
-        .then(data => {
-          if (data.success && data.key) {
-            resultBox.innerHTML = `
-              <div class="alert alert-success">
-                🎉 Key của bạn: <strong id="theKey">${data.key}</strong>
-                <button class="btn btn-sm btn-light" onclick="copyText('${data.key}')">📋 Sao chép</button>
-              </div>
-            `;
-          } else {
-            resultBox.innerHTML = `<div class="alert alert-danger">❌ ${data.message || 'Lỗi không xác định!'}</div>`;
-          }
-        })
-        .catch(() => {
-          resultBox.innerHTML = `<div class="alert alert-danger">❌ Không thể gửi yêu cầu đến server.</div>`;
-        });
-      };
-      reader.readAsDataURL(file);
-    }
-  </script>
+        function getKey(game) {
+            window.location.href = keyLinks[game];
+        }
+    </script>
 </body>
 </html>
